@@ -72,8 +72,8 @@ CREATE TABLE Flights (
 CREATE TABLE Seats (
     seat_id         SERIAL PRIMARY KEY,
     seat_number     VARCHAR(5) NOT NULL,
-    flight_id       INT NOT NULL,
-    FOREIGN KEY (flight_id) REFERENCES Flights (flight_id)
+    plane_id       INT NOT NULL,
+    FOREIGN KEY (plane_id) REFERENCES Planes (plane_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
